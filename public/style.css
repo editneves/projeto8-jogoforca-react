@@ -1,0 +1,125 @@
+body {
+  width: 1025px;
+  height: 839px;
+}
+
+.conteudo-sup {
+  width: 1025px;
+  height: 537px;
+  display: flex;
+}
+
+.img {
+  margin-top: 38px;
+  margin-left: 59px;
+  width: 400px;
+}
+
+.escolher-palavra {
+  margin-left: 334px;
+  margin-top: 30px;
+  width: 200px;
+  height: 60px;
+  background: #27AE60;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+}
+
+.texto {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.conteudo-inf {
+  width: 1025px;
+  height: 313px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.caixa {
+  width: 676px;
+  height: 91px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-around;
+}
+
+.letras {
+  margin-right: 12px;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  background: #9FAAB5;
+  border: 1px solid #7AA7C7;
+  border-radius: 3px;
+}
+
+.caixa2 {
+  margin-top: 56px;
+  width: 624px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h1 {
+  width: 144px;
+  height: 23px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+input {
+  margin-left: 156px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 353px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.chutar {
+  width: 100px;
+  height: 40px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #3C76A1;
+  justify-content: center;
+}
+
+:button {
+  text-align: center;
+}
