@@ -58,7 +58,7 @@ body {
   justify-content: space-around;
 }
 
-.letras {
+.letras-desabilitadas {
   margin-right: 12px;
   box-sizing: border-box;
   width: 40px;
@@ -66,6 +66,16 @@ body {
   background: #9FAAB5;
   border: 1px solid #7AA7C7;
   border-radius: 3px;
+}
+
+.letras-habilitadas {
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #39739D;
 }
 
 .caixa2 {
@@ -122,4 +132,33 @@ input {
 
 :button {
   text-align: center;
+}
+
+.caixa-esq {
+  width: 431px;
+  height: 631px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.letras-escolhidas {
+  margin-top: 282px;
+  margin-left: 150px;
+  width: 423px;
+  height: 68px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 68px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.letra-selecionada {
+  border: 2px solid green;
+  background-color: lightgreen;
 }
