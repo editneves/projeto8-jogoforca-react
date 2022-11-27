@@ -13,8 +13,8 @@ function App() {
   const [espacos, setEspacos] = useState([]);
   const [palavraCor, setPalavraCor] = useState([]);
   const [stylePalavra, setStylePalavra] = useState("letras-escolhidas");
- 
-  //const [espacoVazio, setEspacoVazio] = useState(setEspacos(espacos));
+  
+
   console.log(palavraEscolhida)
   console.log('inicia jogo')
   return (
@@ -27,10 +27,10 @@ function App() {
         letraPalavraEscolhida={letraPalavraEscolhida}
         espacos={espacos}
         setEspacos={setEspacos}
-        palavraCor= {palavraCor}
-          setPalavraCor= {setPalavraCor}
-          stylePalavra={stylePalavra}
-          setStylePalavra= {setStylePalavra}
+        palavraCor={palavraCor}
+        setPalavraCor={setPalavraCor}
+        stylePalavra={stylePalavra}
+        setStylePalavra={setStylePalavra}
       />
       <div className="conteudo-inf">
         <Letras
@@ -51,10 +51,10 @@ function App() {
           setChute={setChute}
           palavraEscolhida={palavraEscolhida}
           letraPalavraEscolhida={letraPalavraEscolhida}
-          palavraCor= {palavraCor}
-          setPalavraCor= {setPalavraCor}
+          palavraCor={palavraCor}
+          setPalavraCor={setPalavraCor}
           stylePalavra={stylePalavra}
-          setStylePalavra= {setStylePalavra}
+          setStylePalavra={setStylePalavra}
         />
       </div>
 

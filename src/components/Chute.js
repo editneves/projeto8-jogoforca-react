@@ -7,6 +7,11 @@ export default function Chute({ disable, setImagem, palavraEscolhida, letraPalav
         let a = [...letraPalavraEscolhida];
         let b = palavraDig;
 
+        var elemento = document.getElementById("excluir");
+        while (elemento.firstChild) {
+            elemento.removeChild(elemento.firstChild);
+        }
+
         if (JSON.stringify(a) === JSON.stringify(b)) {
             palavraCor.push(palavraEscolhida);
             setPalavraCor(palavraCor.toString())

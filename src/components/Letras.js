@@ -13,21 +13,16 @@ export default function Letras({ disable, style, selecionados, setSelecionados,s
         return selecionados
 
     }
-    // function comparaArrays() {
-    //     if (palavraEscolhida.length != selecionados.length) {
-            
-          
-    //         // letrasPalavrasEscolhida palvra escolhida no array
-    //         //letrasChute  escrita
-    //         //selecionados letras selecionadas clicando 
-    //     }
-    //     for (let i = 0; i < palavraEscolhida.length; i++) {
-    //         if (letraPalavraEscolhida[i] !== selecionados[i]) {
-    //             return console.log("letra errada");
-    //         }
-    //     }
+   console.log("aquaiaiiai",palavraEscolhida)
+    function comparaArrays() {
+        for (let i = 0; i < palavraEscolhida.length; i++) {
+            if (letraPalavraEscolhida[i] !== selecionados[i]) {
+                return console.log("letra errada");
+            }
+        }
       
-    //}
+    }comparaArrays()
+
     return (
         <div className="caixa" >
             {alfabeto.map((a) => <button onClick={() => escolherLetra(a)} key={a} disabled={disable} className={style}>{a}</button>)}
