@@ -24,4 +24,11 @@ const palavras = [
     "zebra", "zagueiro", "zero", "zoeira", "zepelim", "zinco", "zumbido"
 ]
 
-export default palavras
+function comparador() {
+    return Math.random() - 0.5;
+}
+const palavrasSorteadas = [...palavras.sort(comparador)]
+const palavraEscolhida = palavrasSorteadas[1].toUpperCase()
+const letraPalavraEscolhida = palavraEscolhida.split('');
+
+export {palavraEscolhida, letraPalavraEscolhida}

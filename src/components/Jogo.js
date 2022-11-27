@@ -1,36 +1,34 @@
 
 // Jogo (imagem da forca, botão de iniciar, palavra do jogo)
 
-export default function Jogo({ setDisable, setStyle, imagem, palavras }) {
+
+
+
+export default function Jogo({ setDisable, setStyle, imagem, letraPalavraEscolhida, espacos, setEspacos,palavraCor, stylePalavra,setStylePalavra}) {
 
     function escolherPalavra() {
         setDisable(false)
         setStyle("letras-habilitadas")
-
-    }
-
-    const palavrasSorteadas = [...palavras.sort(comparador)]
-   
-    function comparador() {
-        return Math.random() - 0.5;
-    }
-    const palavrasEscolhida = palavrasSorteadas[1].toUpperCase()
-    const espacos = [];
-    for (let i = 0; i < palavrasEscolhida.length; i++) {
-
-        espacos.push(" _ ");
         
+        for (let i = 0; i < letraPalavraEscolhida.length; i++) {
+            espacos.push(" _ ")
+            setEspacos(espacos)
+        }
     }
-    
-    return (
 
+
+
+
+    console.log(espacos)
+    return (
         <div className="conteudo-sup">
             <img src={imagem} alt="forca estado inicial" />
 
             <div className="caixa-esq">
                 <button onClick={escolherPalavra} className="texto escolher-palavra">Escolher Palavra</button>
-                <div className="letras-escolhidas">
-                  {espacos}
+                <div className={stylePalavra}>
+                    {espacos}
+                    {palavraCor}
                 </div>
             </div>
         </div>

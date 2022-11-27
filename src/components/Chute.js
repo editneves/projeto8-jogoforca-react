@@ -1,31 +1,29 @@
 // Chute (input e botão de chute)
-import { useState } from "react";
 
-export default function Chute({ disable,setImagem }) {
-
-    const [chute, setChutar] = useState("");
+export default function Chute({ disable, setImagem, palavraEscolhida, letraPalavraEscolhida, palavraCor, setPalavraCor, setStylePalavra }) {
+    // quando o usuário ganha, a palavra completa fica em verde e os botões e input voltam a ficar desabilitados
     function chutar() {
-        const palavraEscolhida = "eu"
+        const palavraDig = document.getElementById("palavraDigitada").value.toUpperCase().split('')
+        let a = [...letraPalavraEscolhida];
+        let b = palavraDig;
 
-        console.log(chute)
-        if (chute === palavraEscolhida) {
-            console.log("vc ganhou")
-
-            // mostrar na tela 
+        if (JSON.stringify(a) === JSON.stringify(b)) {
+            palavraCor.push(palavraEscolhida);
+            setPalavraCor(palavraCor.toString())
+            setStylePalavra("palavra-correta")
         }
         else {
             setImagem("assets/forca6.png")
-            console.log("vc perdeu")
+            palavraCor.push(palavraEscolhida);
+            setPalavraCor(palavraCor.toString())
+            setStylePalavra("palavra-incorreta")
         }
-
-        // mostrar na tela bonequinho enforcado (forca6)
-        
     }
 
     return (
         <div className="caixa2">
             <h1> Já sei a Palavra!</h1>
-            <input disabled={disable} onChange={event => setChutar(event.target.value)} type="text" placeholder="" />
+            <input disabled={disable} id="palavraDigitada" type="text" placeholder="" />
             <button onClick={chutar} className="chutar">Chutar</button>
         </div>
     )

@@ -78,6 +78,38 @@ body {
   color: #39739D;
 }
 
+.palavra-correta {
+  margin-top: 282px;
+  margin-left: 150px;
+  width: 294px;
+  height: 68px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 68px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #27AE60;
+}
+
+.palavra-incorreta {
+  margin-top: 282px;
+  margin-left: 150px;
+  width: 294px;
+  height: 68px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 68px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FF0000;
+}
+
 .caixa2 {
   margin-top: 56px;
   width: 624px;
