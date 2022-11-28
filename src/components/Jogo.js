@@ -1,22 +1,23 @@
-
-// Jogo (imagem da forca, botão de iniciar, palavra do jogo)
 import { palavras } from "../palavras";
-export default function Jogo({ setPalavra, setPalavraEscolhida, novaPalavra, setImagem, setFimJogo, setCount, palavraEscolhida, setPalavraCor, setStylePalavra, fimJogo, setDisable, setStyle, imagem, letraPalavraEscolhida, palpites, setPalpites, palavraCor, stylePalavra }) {
+
+export default function Jogo({ setPalavra, novaPalavra, setImagem, setFimJogo, setCount,
+                               palavraEscolhida, setStylePalavra, fimJogo, setDisable, 
+                               setStyle, imagem, palpites,setPalpites, stylePalavra }) {
 
     function comparador() {
         return Math.random() - 0.5;
     }
+
     function novaPalavra() {
-        console.log("entrei")
         const palavrasSorteadas = [...palavras.sort(comparador)]
         const palavraEscolhida = palavrasSorteadas[1].toUpperCase()
         const palavra2 = palavraEscolhida.split('');
-        
         setPalavra(palavra2)
         return palavra2
     }
-  
+
     const espaco = []
+
     function escolherPalavra() {
         const palavraAtual=  novaPalavra() 
         setCount(0)
@@ -28,25 +29,20 @@ export default function Jogo({ setPalavra, setPalavraEscolhida, novaPalavra, set
         setPalpites(espaco)
         separarLetras(palavraAtual)
     }
-    if (fimJogo) {
-        //  palavraCor.push(palavraEscolhida);
-        //   setPalavraCor(palavraCor.toString())
-
-    }
+    
     function separarLetras(palavraAtual) {
         for (let i = 0; i < palavraAtual.length; i++) {
             espaco.push(" _ ")
         }
     }
 
-    
     return (
         <div className="conteudo-sup">
-            <img src={imagem} alt="forca estado inicial" />
+            <img data-test="game-image" src={imagem} alt="forca estado inicial" />
 
             <div className="caixa-esq">
-                <button onClick={() => escolherPalavra()} className="texto escolher-palavra">Escolher Palavra</button>
-                <div id="excluir" className={stylePalavra}>
+                <button data-test="choose-word" onClick={() => escolherPalavra()} className="texto escolher-palavra">Escolher Palavra</button>
+                <div data-test="word" data-answer={palavraEscolhida} id="excluir" className={stylePalavra}>
                     {!fimJogo ? palpites : palavraEscolhida}
                 </div>
             </div>
