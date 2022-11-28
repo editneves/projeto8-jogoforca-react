@@ -40,7 +40,7 @@ function App() {
           letraPalavraEscolhida={letraPalavraEscolhida}
           palavraEscolhida={palavraEscolhida}
           letraChute={letraChute}
-          setLetraChute ={setLetraChute}
+          setLetraChute={setLetraChute}
           setPalpites={setPalpites}
           palpites={palpites}
         />

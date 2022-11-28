@@ -9,9 +9,8 @@ export default function Letras({ disable,palpites, style, palavraEscolhida, setP
     ]
 
     const handleClick = (letra) => {
-        //setLetraChute(letra);
+        document.getElementById(`letter-${letra}`).disabled = true
         letra = letra.toUpperCase()
-        //console.log("letra:",palavraEscolhida,letra)
         if (palavraEscolhida.includes(letra)) {
             const chute = []
             for (let i = 0; i < letraPalavraEscolhida.length; i++) {
@@ -20,17 +19,14 @@ export default function Letras({ disable,palpites, style, palavraEscolhida, setP
                 }
                 else {
                     chute.push(palpites[i]) 
+
                 }
                 console.log("oioioi", chute)
             }
     
             setPalpites(chute)
         }
-
-
-
-
-
+ 
     };
 
     return (
@@ -40,8 +36,10 @@ export default function Letras({ disable,palpites, style, palavraEscolhida, setP
                     onClick={() => handleClick(a)}
                     key={a}
                     disabled={disable}
-                    className={style}>
+                    className={style}
+                    id={`letter-${a}`}>
                     {a.toUpperCase()}
+                    
                 </button>)}
         </div>
     )

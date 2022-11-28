@@ -6,7 +6,7 @@ export default function Jogo({ setDisable, setStyle, imagem, letraPalavraEscolhi
     function escolherPalavra() {
         setDisable(false)
         setStyle("letras-habilitadas")
-       const espaco = []
+        const espaco = []
         for (let i = 0; i < letraPalavraEscolhida.length; i++) {
             espaco.push(" _ ")
         }
@@ -19,8 +19,8 @@ export default function Jogo({ setDisable, setStyle, imagem, letraPalavraEscolhi
 
             <div className="caixa-esq">
                 <button onClick={escolherPalavra} className="texto escolher-palavra">Escolher Palavra</button>
-                <div id= "excluir" className={stylePalavra}>
-                    {palpites}  
+                <div id="excluir" className={stylePalavra}>
+                    {palpites}
                     {palavraCor}
                 </div>
             </div>
