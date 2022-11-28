@@ -9,14 +9,12 @@ function App() {
   const [style, setStyle] = useState("letras-desabilitadas");
   const [imagem, setImagem] = useState("assets/forca0.png");
   const [selecionados, setSelecionados] = useState([]);
-  const [chute, setChute] = useState("");
-  const [espacos, setEspacos] = useState([]);
+  const [palpites, setPalpites] = useState([]);
   const [palavraCor, setPalavraCor] = useState([]);
   const [stylePalavra, setStylePalavra] = useState("letras-escolhidas");
-  const [message, setMessage] = useState("");
+  const [letraChute, setLetraChute] = useState("");
 
   console.log(palavraEscolhida)
-  console.log('inicia jogo')
   return (
     <div>
       <Jogo
@@ -25,8 +23,8 @@ function App() {
         imagem={imagem}
         palavraEscolhida={palavraEscolhida}
         letraPalavraEscolhida={letraPalavraEscolhida}
-        espacos={espacos}
-        setEspacos={setEspacos}
+        palpites={palpites}
+        setPalpites={setPalpites}
         palavraCor={palavraCor}
         setPalavraCor={setPalavraCor}
         stylePalavra={stylePalavra}
@@ -39,15 +37,17 @@ function App() {
           style={style}
           selecionados={selecionados}
           setSelecionados={setSelecionados}
-          message={message}
-          setMessage= {setMessage}
+          letraPalavraEscolhida={letraPalavraEscolhida}
+          palavraEscolhida={palavraEscolhida}
+          letraChute={letraChute}
+          setLetraChute ={setLetraChute}
+          setPalpites={setPalpites}
+          palpites={palpites}
         />
         <Chute
           disable={disable}
           setDisable={setDisable}
           setImagem={setImagem}
-          chute={chute}
-          setChute={setChute}
           palavraEscolhida={palavraEscolhida}
           letraPalavraEscolhida={letraPalavraEscolhida}
           palavraCor={palavraCor}

@@ -1,7 +1,7 @@
 
 // Jogo (imagem da forca, botão de iniciar, palavra do jogo)
 
-export default function Jogo({ setDisable, setStyle, imagem, letraPalavraEscolhida, espacos, setEspacos, palavraCor, stylePalavra }) {
+export default function Jogo({ setDisable, setStyle, imagem, letraPalavraEscolhida, palpites, setPalpites, palavraCor, stylePalavra }) {
 
     function escolherPalavra() {
         setDisable(false)
@@ -10,7 +10,7 @@ export default function Jogo({ setDisable, setStyle, imagem, letraPalavraEscolhi
         for (let i = 0; i < letraPalavraEscolhida.length; i++) {
             espaco.push(" _ ")
         }
-        setEspacos(espaco)
+        setPalpites(espaco)
     }
 
     return (
@@ -20,7 +20,7 @@ export default function Jogo({ setDisable, setStyle, imagem, letraPalavraEscolhi
             <div className="caixa-esq">
                 <button onClick={escolherPalavra} className="texto escolher-palavra">Escolher Palavra</button>
                 <div id= "excluir" className={stylePalavra}>
-                    {espacos}  
+                    {palpites}  
                     {palavraCor}
                 </div>
             </div>
