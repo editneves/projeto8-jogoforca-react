@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# todo
+Ao pressionar uma letra
+
+1. O botão de uma letra já clicada deve ficar desabilitado
+2. Letra Certa: Se a palavra escolhida no jogo tiver a letra que o usuário apertou: O underline 
+    da posição correspondente à letra deve ser substituído pela letra em si
+3. Letra errada: contar a quantidade de erros. começa com 0 - Sua contagem de erros deve aumentar
+4. Letra errada:A imagem na forca deve mudar (forca0 > forca1 > forca2… e assim sucessivamente)

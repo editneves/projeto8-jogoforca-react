@@ -13,7 +13,7 @@ function App() {
   const [espacos, setEspacos] = useState([]);
   const [palavraCor, setPalavraCor] = useState([]);
   const [stylePalavra, setStylePalavra] = useState("letras-escolhidas");
-  
+  const [message, setMessage] = useState("");
 
   console.log(palavraEscolhida)
   console.log('inicia jogo')
@@ -39,9 +39,8 @@ function App() {
           style={style}
           selecionados={selecionados}
           setSelecionados={setSelecionados}
-          palavraEscolhida={palavraEscolhida}
-          letraPalavraEscolhida={letraPalavraEscolhida}
-          espacos={espacos}
+          message={message}
+          setMessage= {setMessage}
         />
         <Chute
           disable={disable}

@@ -11,7 +11,6 @@ export default function Jogo({ setDisable, setStyle, imagem, letraPalavraEscolhi
             espaco.push(" _ ")
         }
         setEspacos(espaco)
-
     }
 
     return (
