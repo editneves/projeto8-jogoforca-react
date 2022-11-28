@@ -1,4 +1,4 @@
-import { palavraEscolhida, letraPalavraEscolhida } from './palavras';
+
 import Jogo from './components/Jogo';
 import Letras from './components/Letras';
 import Chute from './components/Chute';
@@ -13,22 +13,33 @@ function App() {
   const [palavraCor, setPalavraCor] = useState([]);
   const [stylePalavra, setStylePalavra] = useState("letras-escolhidas");
   const [letraChute, setLetraChute] = useState("");
+  const [count, setCount] = useState(0);
+  const [fimJogo, setFimJogo] = useState(false);
+  const [palavra, setPalavra] = useState("");
+  const [palavraEscolhida, setPalavraEscolhida] = useState("");
 
-  console.log(palavraEscolhida)
+  console.log(palavra)
+
   return (
     <div>
       <Jogo
         setDisable={setDisable}
         setStyle={setStyle}
         imagem={imagem}
-        palavraEscolhida={palavraEscolhida}
-        letraPalavraEscolhida={letraPalavraEscolhida}
+        palavraEscolhida={palavra}
+        letraPalavraEscolhida={palavra}
         palpites={palpites}
         setPalpites={setPalpites}
         palavraCor={palavraCor}
         setPalavraCor={setPalavraCor}
         stylePalavra={stylePalavra}
         setStylePalavra={setStylePalavra}
+        fimJogo={fimJogo}
+        setFimJogo={setFimJogo}
+        setCount={setCount}
+        setImagem={setImagem}
+        setPalavra={setPalavra}
+        setPalavraEscolhida={setPalavraEscolhida}
       />
       <div className="conteudo-inf">
         <Letras
@@ -37,33 +48,36 @@ function App() {
           style={style}
           selecionados={selecionados}
           setSelecionados={setSelecionados}
-          letraPalavraEscolhida={letraPalavraEscolhida}
-          palavraEscolhida={palavraEscolhida}
+          letraPalavraEscolhida={palavra}
+          palavraEscolhida={palavra}
           letraChute={letraChute}
           setLetraChute={setLetraChute}
           setPalpites={setPalpites}
           palpites={palpites}
+          count={count}
+          setCount={setCount}
+          setImagem={setImagem}
+          setStylePalavra={setStylePalavra}
+          setPalavraCor={setPalavraCor}
+          palavraCor={palavraCor}
+          fimJogo={fimJogo}
+          setFimJogo={setFimJogo}
+          setStyle={setStyle}
         />
         <Chute
           disable={disable}
           setDisable={setDisable}
           setImagem={setImagem}
-          palavraEscolhida={palavraEscolhida}
-          letraPalavraEscolhida={letraPalavraEscolhida}
+          palavraEscolhida={palavra}
+          letraPalavraEscolhida={palavra}
           palavraCor={palavraCor}
           setPalavraCor={setPalavraCor}
           stylePalavra={stylePalavra}
           setStylePalavra={setStylePalavra}
+          setFimJogo={setFimJogo}
+          
         />
       </div>
-
-      <img src="assets/forca1.png" />
-      <img src="assets/forca2.png" />
-      <img src="assets/forca3.png" />
-      <img src="assets/forca4.png" />
-      <img src="assets/forca5.png" />
-      <img src="assets/forca6.png" />
-
     </div>
   )
 }
